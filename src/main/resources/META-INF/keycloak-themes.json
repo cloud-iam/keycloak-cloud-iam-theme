@@ -1,0 +1,6 @@
+{
+    "themes": [{
+        "name" : "cloud-iam",
+        "types": [ "login" ]
+    }]
+}
