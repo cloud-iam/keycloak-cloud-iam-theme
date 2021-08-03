@@ -6,15 +6,22 @@
 mvn package
 ```
 
-## Docker
+## Theme Development Workflow
 
-Lancer le docker avec la commande suivante :
+Build this theme `.jar` file with:
+
+```bash
+# build the theme and wrap it in a .jar file
+mvn package
+
+# move theme to /tmp/theme/ folder for futur use by keycloak
+mkdir -p /tmp/theme && cp -v target/*.jar /tmp/theme/
 ```
+
+Then start Keycloak IAM (in single-node mode) locally through docker and use the host `/tmp/theme` folder as Keycloak deployment directory.
+
+```bash
 docker run -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -v /tmp/theme:/opt/jboss/keycloak/standalone/deployments/ quay.io/keycloak/keycloak:15.0.0
 ```
 
-Puis aller sur `localhost:8080`. Une fois connecter, aller dans la section thème et pour la liste déroulante `Login Theme` choisissez cloud-iam.
-
-Pour ajouter un thème, il faudra récupérer le fichier jar compiler lors du `mvn package`, qui se situe dans le dossier `/target` et le placer sur votre ordinateur dans le dossier `/tmp/theme`.
-
-Si vous regardez dans la commande docker, vous pouvez voir que `/tmp/theme` qui est en local sera relié à `/opt/jboss/keycloak/standalone/deployments/` qui sera sur le docker.
+Connect to Keycloak console [http://localhost:8080](http://localhost:8080), click on `Theme` tab, and select `cloud-iam` in front of `Login Theme`.
