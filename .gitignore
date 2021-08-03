@@ -2,5 +2,6 @@
 target
 .parcel-cache
 *.iml
+*.log
 node_modules
 src/main/resources/theme/cloud-iam/login/resources/dist
