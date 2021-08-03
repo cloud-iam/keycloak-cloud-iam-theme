@@ -1,2 +1,5 @@
 .idea
 target
+.parcel-cache
+*.iml
+src/main/resources/theme/cloud-iam/login/resources/dist

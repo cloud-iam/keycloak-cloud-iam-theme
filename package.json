@@ -1,0 +1,20 @@
+{
+  "name": "cloud-iam-keycloak-theme",
+  "version": "1.0.0",
+  "keywords": [
+    "keycloak",
+    "theme",
+    "keycloak-theme"
+  ],
+  "description": "Cloud-IAM Theme for Keycloak",
+  "scripts": {
+    "build": "parcel build --dist-dir=./src/main/resources/theme/cloud-iam/login/resources/dist/ ./src/main/resources/theme/cloud-iam/login/resources/scss/*.scss"
+  },
+  "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "parcel": "^2.0.0-rc.0"
+  }
+}
