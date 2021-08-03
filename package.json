@@ -13,8 +13,21 @@
   "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
   "license": "MIT",
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.3",
     "@parcel/transformer-image": "^2.0.0-rc.0",
     "@parcel/transformer-sass": "^2.0.0-rc.0",
-    "parcel": "^2.0.0-rc.0"
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "parcel": "^2.0.0-rc.0",
+    "postcss-fontpath": "^1.0.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.6",
+    "postcss": "^8.2.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.7"
   }
 }
