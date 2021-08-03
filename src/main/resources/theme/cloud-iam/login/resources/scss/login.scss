@@ -60,12 +60,8 @@ form{
   @apply h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded;
 }
 
-.checkbox label{
-  @apply ml-2 block text-sm text-gray-900;
-}
-
 #kc-form-options label{
-  @apply ml-2 block text-sm text-gray-900;
+  @apply block text-sm text-gray-900;
 }
 
 .login-pf-settings{
@@ -94,4 +90,11 @@ form{
 
 .login-pf-page .login-pf-signup {
   @apply mt-5;
+}
+
+.checkbox, .radio {
+  position: inherit;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
 }
