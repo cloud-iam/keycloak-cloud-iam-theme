@@ -9,7 +9,7 @@ jobs:
         run: bash build.sh
         shell: bash
       - name: Archive artifacts (jar)
-      uses: actions/upload-artifact@v2
-      with:
-        name: save jar
-        path: dist
+        uses: actions/upload-artifact@v2
+        with:
+          name: save jar
+          path: dist
