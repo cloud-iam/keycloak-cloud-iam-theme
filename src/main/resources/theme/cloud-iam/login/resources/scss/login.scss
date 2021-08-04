@@ -98,3 +98,31 @@ form{
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.card-pf .form-group:last-child{
+  @apply flex flex-col-reverse justify-center items-center
+}
+
+.card-pf #kc-form-options{
+  @apply mt-2;
+}
+
+.form-group-cgu{
+  @apply flex justify-center items-center flex-row;
+}
+
+.form-group-cgu{
+  margin-left: -1px !important;
+}
+
+.form-group-cgu input{
+ @apply h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded mb-0.5;
+}
+
+.form-group-cgu label {
+  @apply ml-2 block text-sm text-gray-900 mb-0;
+}
+
+.form-group-cgu label a {
+  @apply font-medium text-indigo-600 hover:text-indigo-500;
+}
