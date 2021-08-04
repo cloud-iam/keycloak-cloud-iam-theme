@@ -1,0 +1,128 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body, .login-pf body{
+  @apply bg-transparent;
+}
+
+.login-pf-page {
+  @apply min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8;
+}
+
+#kc-header, .login-pf-page-header {
+  @apply m-0;
+}
+
+#kc-header-wrapper{
+  @apply h-32 w-full;
+}
+
+.kc-logo-text {
+  background-image: url(../img/630x630-blue.png);
+  background-size: 8rem;
+  @apply w-full h-full bg-no-repeat bg-center;
+}
+
+div.kc-logo-text span {
+  @apply hidden;
+}
+
+.card-pf{
+ @apply mt-4 sm:mx-auto sm:w-full sm:max-w-md bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10;
+}
+
+form{
+  @apply space-y-6;
+}
+
+.form-group label{
+  @apply block text-sm font-medium text-gray-700 cursor-default;
+}
+
+.form-group input{
+  @apply appearance-none block w-full border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm;
+}
+
+.login-pf-header h1{
+  @apply mt-2 text-center text-3xl font-extrabold text-gray-900 mb-4;
+}
+
+#id-hidden-input{
+  @apply hidden;
+}
+
+#kc-login{
+  @apply w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-50;
+}
+
+#rememberMe{
+  @apply h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded;
+}
+
+#kc-form-options label{
+  @apply block text-sm text-gray-900;
+}
+
+.login-pf-settings{
+  @apply flex items-center;
+}
+
+.login-pf-settings div span a{
+  @apply font-medium text-sm text-indigo-600 hover:text-indigo-500 no-underline;
+}
+
+.login-pf-settings div span a:hover{
+  @apply no-underline;
+}
+
+#kc-registration a{
+  @apply font-medium text-indigo-600 hover:text-indigo-500;
+}
+
+#kc-registration a:hover{
+  @apply no-underline;
+}
+
+.form-group input[type="checkbox"] {
+  @apply p-0;
+}
+
+.login-pf-page .login-pf-signup {
+  @apply mt-5;
+}
+
+.checkbox, .radio {
+  position: inherit;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card-pf .form-group:last-child{
+  @apply flex flex-col-reverse justify-center items-center
+}
+
+.card-pf #kc-form-options{
+  @apply mt-2;
+}
+
+.form-group-cgu{
+  @apply flex justify-center items-center flex-row;
+}
+
+.form-group-cgu{
+  margin-left: -1px !important;
+}
+
+.form-group-cgu input{
+ @apply h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded mb-0.5;
+}
+
+.form-group-cgu label {
+  @apply ml-2 block text-sm text-gray-900 mb-0;
+}
+
+.form-group-cgu label a {
+  @apply font-medium text-indigo-600 hover:text-indigo-500;
+}
