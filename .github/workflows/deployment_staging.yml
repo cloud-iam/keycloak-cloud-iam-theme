@@ -1,0 +1,17 @@
+name: Deployment Staging
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Curl a deployment
+        env:
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          ACCOUNT_EMAIL: ${{ secrets.ACCOUNT_EMAIL }}
+          ACCOUNT_PASSWORD: ${{ secrets.ACCOUNT_PASSWORD }}
+        run: |
+          curl -s -q https://staging-iam.cloud-iam.com/auth/realms/cloud-iam/protocol/openid-connect/token -d "grant_type=password&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET&username=$ACCOUNT_EMAIL&password=$ACCOUNT_PASSWORD" -r .access_token
