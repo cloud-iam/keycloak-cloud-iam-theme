@@ -12,4 +12,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: save jar
-          path: src/main/resources/theme/cloud-iam/login/resources/dist
+          path: target/*.jar
