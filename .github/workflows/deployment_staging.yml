@@ -1,6 +1,6 @@
 name: Deployment Staging
-on:
-  workflow_dispatch:
+on: [push, pull_request]
+#  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -8,9 +8,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Curl a deployment
         env:
-          CLIENT_ID: ${{ secrets.GithubActions.CLIENT_ID }}
-          CLIENT_SECRET: ${{ secrets.GithubActions.CLIENT_SECRET }}
-          ACCOUNT_EMAIL: ${{ secrets.GithubActions.ACCOUNT_EMAIL }}
-          ACCOUNT_PASSWORD: ${{ secrets.GithubActions.ACCOUNT_PASSWORD }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          ACCOUNT_EMAIL: ${{ secrets.ACCOUNT_EMAIL }}
+          ACCOUNT_PASSWORD: ${{ secrets.ACCOUNT_PASSWORD }}
         run: |
-          curl -s -q https://staging-iam.cloud-iam.com/auth/realms/cloud-iam/protocol/openid-connect/token -d "grant_type=password&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET&username=$ACCOUNT_EMAIL&password=$ACCOUNT_PASSWORD" -r .access_token
+          echo $CLIENT_ID
