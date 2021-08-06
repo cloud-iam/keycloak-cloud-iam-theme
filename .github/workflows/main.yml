@@ -29,4 +29,5 @@ jobs:
           ACCOUNT_PASSWORD: ${{ secrets.ACCOUNT_PASSWORD }}
         run: |
           ACCESS_TOKEN=$(curl -s -q $ENDPOINT_IAM/auth/realms/cloud-iam/protocol/openid-connect/token -d "grant_type=password&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET&username=$ACCOUNT_EMAIL&password=$ACCOUNT_PASSWORD" | jq -r .access_token)
+          echo $ENDPOINT_API
           curl --location --request POST 'https://staging-api.cloud-iam.com/deployments/$DEPLOYMENT_ID/extensions/jars' --header 'Authorization: Bearer $ACCESS_TOKEN' --form 'extension=@cloud-iam-theme-1.0.0-SNAPSHOT.jar' --http1.1
