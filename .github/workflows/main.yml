@@ -33,3 +33,23 @@ jobs:
         run: |
           ACCESS_TOKEN=$(curl -s -q $ENDPOINT_IAM/auth/realms/cloud-iam/protocol/openid-connect/token -d "grant_type=password&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET&username=$ACCOUNT_EMAIL&password=$ACCOUNT_PASSWORD" | jq -r .access_token)
           curl -v --location --request POST "${ENDPOINT_API}/deployments/${DEPLOYMENT_ID}/extensions/jars" --header "Authorization: Bearer ${ACCESS_TOKEN}" --form 'extension=@cloud-iam-theme-1.0.0-SNAPSHOT.jar' --http1.1
+#  deployment_production:
+#    needs: build
+#    runs-on: ubuntu-latest
+#    environment: production
+#    steps:
+#      - uses: actions/download-artifact@v2
+#        with:
+#          name: artifacts-jar
+#      - name: Curl a deployment
+#        env:
+#          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+#          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+#          ACCOUNT_EMAIL: ${{ secrets.ACCOUNT_EMAIL }}
+#          ACCOUNT_PASSWORD: ${{ secrets.ACCOUNT_PASSWORD }}
+#          ENDPOINT_IAM: ${{ secrets.ENDPOINT_IAM }}
+#          ENDPOINT_API: ${{ secrets.ENDPOINT_API }}
+#          DEPLOYMENT_ID: ${{ secrets.DEPLOYMENT_ID }}
+#        run: |
+#          ACCESS_TOKEN=$(curl -s -q $ENDPOINT_IAM/auth/realms/cloud-iam/protocol/openid-connect/token -d "grant_type=password&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET&username=$ACCOUNT_EMAIL&password=$ACCOUNT_PASSWORD" | jq -r .access_token)
+#          curl -v --location --request POST "${ENDPOINT_API}/deployments/${DEPLOYMENT_ID}/extensions/jars" --header "Authorization: Bearer ${ACCESS_TOKEN}" --form 'extension=@cloud-iam-theme-1.0.0-SNAPSHOT.jar' --http1.1
