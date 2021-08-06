@@ -32,6 +32,4 @@ jobs:
           DEPLOYMENT_ID: ${{ secrets.DEPLOYMENT_ID }}
         run: |
           ACCESS_TOKEN=$(curl -s -q $ENDPOINT_IAM/auth/realms/cloud-iam/protocol/openid-connect/token -d "grant_type=password&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET&username=$ACCOUNT_EMAIL&password=$ACCOUNT_PASSWORD" | jq -r .access_token)
-          URL_ENDPOINT_API= "${ENDPOINT_API}/deployments/${DEPLOYMENT_ID}/extensions/jars"
-          echo $URL_ENDPOINT_API
-          curl -v --location --request POST $URL_ENDPOINT_API --header 'Authorization: Bearer '"${ACCESS_TOKEN}" --form 'extension=@cloud-iam-theme-1.0.0-SNAPSHOT.jar' --http1.1
+          curl -v --location --request POST "${ENDPOINT_API}/deployments/${DEPLOYMENT_ID}/extensions/jars" --header "Authorization: Bearer ${ACCESS_TOKEN}" --form 'extension=@cloud-iam-theme-1.0.0-SNAPSHOT.jar' --http1.1
