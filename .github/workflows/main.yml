@@ -13,6 +13,8 @@ jobs:
         with:
           name: artifacts-jar
           path: target/*.jar
+      - name : ls
+        run: ls -la
   deployment_staging:
     runs-on: ubuntu-latest
     environment: staging
@@ -26,8 +28,5 @@ jobs:
           ACCOUNT_PASSWORD: ${{ secrets.ACCOUNT_PASSWORD }}
         run: |
           ACCESS_TOKEN=$(curl -s -q $ENDPOINT_IAM/auth/realms/cloud-iam/protocol/openid-connect/token -d "grant_type=password&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET&username=$ACCOUNT_EMAIL&password=$ACCOUNT_PASSWORD" | jq -r .access_token)
-          ls -la /
-          ls -la /tmp
-          ls -la /tmp/theme
 #          curl --location --request POST '$ENDPOINT_API/deployments/$DEPLOYMENT_ID/extensions/jars' \ --header 'Authorization: Bearer $ACCESS_TOKEN' \ --form 'extension=@example.jar' \ --http1.1
 
