@@ -9,10 +9,10 @@
                     <label for="firstName" class="${properties.kcLabelClass!}">${msg("firstName")}</label>
                 </div>
                 <div class="${properties.kcInputWrapperClass!}">
-<#--                    <input type="text" id="firstName" class="${properties.kcInputClass!}" name="firstName"-->
-<#--                           value="${(register.formData.firstName!'')}"-->
-<#--                           aria-invalid="<#if messagesPerField.existsError('firstName')>true</#if>"-->
-<#--                    />-->
+                    <input type="text" id="firstName" class="${properties.kcInputClass!}" name="firstName"
+                           value="${(register.formData.firstName!'')}"
+                           aria-invalid="<#if messagesPerField.existsError('firstName')>true</#if>"
+                    />
 
                     <#if messagesPerField.existsError('firstName')>
                         <span id="input-error-firstname" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
