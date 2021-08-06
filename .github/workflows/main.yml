@@ -14,7 +14,9 @@ jobs:
           name: artifacts-jar
           path: target/*.jar
       - name : ls
-        run: ls -la
+        run: |
+          ls -la
+          ls -la ./target
   deployment_staging:
     runs-on: ubuntu-latest
     environment: staging
