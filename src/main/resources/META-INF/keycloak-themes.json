@@ -1,6 +1,6 @@
 {
     "themes": [{
-        "name" : "cloud-iam",
-        "types": [ "login" ]
+        "name" : "cloud-iam-v2",
+        "types": [ "login", "email" ]
     }]
 }
