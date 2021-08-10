@@ -48,7 +48,7 @@
                 <div class="${properties.kcLocaleMainClass!}" id="kc-locale">
                     <div id="kc-locale-wrapper" class="${properties.kcLocaleWrapperClass!}">
                         <div id="kc-locale-dropdown" class="${properties.kcLocaleDropDownClass!}">
-                            <a href="#" id="kc-current-locale-link">${locale.current}</a>
+                            <a href="#" id="kc-current-locale-link">${locale.current} ▼</a>
                             <ul class="${properties.kcLocaleListClass!}">
                                 <#list locale.supported as l>
                                     <li class="${properties.kcLocaleListItemClass!}">

@@ -2,8 +2,13 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-body, .login-pf body {
-  @apply bg-transparent;
+
+body, .login-pf body, .login-pf {
+  @apply bg-gray-50;
+}
+
+.login-pf{
+  background: rgba(249, 250, 251, var(--tw-bg-opacity)) !important;
 }
 
 .login-pf-page {
@@ -14,11 +19,14 @@ body, .login-pf body {
   @apply m-0;
 }
 
-
 #kc-header-wrapper {
   background-image: url(../img/630x630-blue.png);
   background-size: 8rem;
   @apply h-32 w-full bg-no-repeat bg-center text-transparent;
+}
+
+#kc-locale-wrapper{
+  @apply mb-2
 }
 
 div.kc-logo-text span {
@@ -125,7 +133,7 @@ form {
 }
 
 .pf-c-dropdown__menu {
-  @apply hidden -mt-1.5;
+  @apply hidden -mt-2.5;
 }
 
 .pf-c-dropdown__menu:hover {
