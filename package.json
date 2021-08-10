@@ -8,7 +8,7 @@
   ],
   "description": "Cloud-IAM Theme for Keycloak",
   "scripts": {
-    "build": "parcel build --dist-dir=./src/main/resources/theme/cloud-iam/login/resources/dist/ ./src/main/resources/theme/cloud-iam/login/resources/scss/*.scss"
+    "build": "parcel build --dist-dir=./src/main/resources/theme/cloud-iam-redesign/login/resources/dist/ src/main/resources/theme/cloud-iam-redesign/login/resources/scss/*.scss"
   },
   "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
   "license": "MIT",
