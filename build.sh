@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# install dependencies
+npm install
+
 # compile theme
 npm run build
 
