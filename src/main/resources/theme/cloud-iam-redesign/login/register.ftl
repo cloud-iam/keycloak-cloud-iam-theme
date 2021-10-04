@@ -124,11 +124,6 @@
                 </div>
             </#if>
 
-            <div class="form-group form-group-cgu">
-                <input type="checkbox" id="CGU" name="CGU" required />
-                <label class="" for="CGU">By clicking Sign Up, you agree to our <a href="https://www.cloud-iam.com/en/terms" target="_blank">Terms</a>, <a href="https://www.cloud-iam.com/en/data-processing-addendum" target="_blank">Data Policy</a>.</label>
-            </div>
-
             <div class="${properties.kcFormGroupClass!}">
                 <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
                     <div class="${properties.kcFormOptionsWrapperClass!}">
