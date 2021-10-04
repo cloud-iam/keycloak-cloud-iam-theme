@@ -147,3 +147,24 @@ form {
 #kc-current-locale-link:hover + .pf-c-dropdown__menu {
   @apply block;
 }
+
+#kc-terms-text {
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+#kc-form-buttons input {
+  margin-top: 20px;
+}
+
+.pf-c-button {
+  @apply w-full flex py-2 px-4 border border-transparent rounded-md justify-center text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-50;
+}
+
+.pf-c-button.pf-m-primary {
+  @apply shadow-sm text-white bg-indigo-600 hover:bg-indigo-700
+}
+
+.pf-c-button.btn-default {
+  @apply shadow-none bg-none bg-white text-indigo-600 hover:text-indigo-500;
+}
