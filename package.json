@@ -14,8 +14,8 @@
   "license": "MIT",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",
-    "@parcel/transformer-image": "^2.0.0-rc.0",
-    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "@parcel/transformer-image": "^2.8.0",
+    "@parcel/transformer-sass": "^2.8.0",
     "@tailwindcss/forms": "^0.3.3",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
@@ -23,7 +23,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^5.0.0",
-    "parcel": "^2.0.0-rc.0",
+    "parcel": "^2.8.0",
     "postcss-fontpath": "^1.0.0"
   },
   "dependencies": {
