@@ -57,7 +57,7 @@
             }
 
         </style>
-        <title>Cloud-iam</title>
+        <title>Cloud-IAM</title>
     </head>
     <body>
     <div class="main">
@@ -66,7 +66,7 @@
             <hr>
             <#nested "text">
             <hr>
-            <p class="footer">Â© 2020 Cloud IAM, Keycloak is a registered trademark of Red Hat, Cloud-IAM is not affiliated in any way
+            <p class="footer">© 2023 Cloud IAM, Keycloak is a registered trademark of Red Hat, Cloud-IAM is not affiliated in any way
                 with Red Hat.</p>
         </div>
     </div>
