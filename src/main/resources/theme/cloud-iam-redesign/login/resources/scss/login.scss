@@ -20,8 +20,8 @@ body, .login-pf body, .login-pf {
 }
 
 #kc-header-wrapper {
-  background-image: url(../img/630x630-blue.png);
-  background-size: 8rem;
+  background-image: url(../img/logo.png);
+  background-size: 16rem;
   @apply h-32 w-full bg-no-repeat bg-center text-transparent;
 }
 
@@ -46,7 +46,7 @@ form {
 }
 
 .form-group input {
-  @apply appearance-none block w-full border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm;
+  @apply appearance-none block w-full border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-ciam_medium focus:border-ciam_medium sm:text-sm;
 }
 
 .login-pf-header h1 {
@@ -58,11 +58,11 @@ form {
 }
 
 #kc-login {
-  @apply w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-50;
+  @apply w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-ciam_medium hover:bg-ciam_dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ciam_light;
 }
 
 #rememberMe {
-  @apply h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded;
+  @apply h-4 w-4 text-ciam_medium focus:ring-ciam_medium border-gray-300 rounded;
 }
 
 #kc-form-options label {
@@ -74,7 +74,7 @@ form {
 }
 
 .login-pf-settings div span a {
-  @apply font-medium text-sm text-indigo-600 hover:text-indigo-500 no-underline;
+  @apply font-medium text-sm text-ciam_medium hover:text-ciam_medium no-underline;
 }
 
 .login-pf-settings div span a:hover {
@@ -82,7 +82,7 @@ form {
 }
 
 #kc-registration a {
-  @apply font-medium text-indigo-600 hover:text-indigo-500;
+  @apply font-medium text-ciam_medium hover:text-ciam_medium;
 }
 
 #kc-registration a:hover {
@@ -122,7 +122,7 @@ form {
 }
 
 .form-group-cgu input {
-  @apply h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded mb-0.5;
+  @apply h-4 w-4 text-ciam_medium focus:ring-ciam_medium border-gray-300 rounded mb-0.5;
 }
 
 .form-group-cgu label {
@@ -130,7 +130,7 @@ form {
 }
 
 .form-group-cgu label a {
-  @apply font-medium text-indigo-600 hover:text-indigo-500;
+  @apply font-medium text-ciam_medium hover:text-ciam_medium;
 }
 
 .pf-c-dropdown__menu {
@@ -142,7 +142,7 @@ form {
 }
 
 #kc-current-locale-link {
-  @apply font-medium text-indigo-600 hover:text-indigo-500;
+  @apply font-medium text-ciam_medium hover:text-ciam_medium;
 }
 
 #kc-current-locale-link:hover + .pf-c-dropdown__menu {
@@ -159,13 +159,13 @@ form {
 }
 
 .pf-c-button {
-  @apply w-full flex py-2 px-4 border border-transparent rounded-md justify-center text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-50;
+  @apply w-full flex py-2 px-4 border border-transparent rounded-md justify-center text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ciam_light;
 }
 
 .pf-c-button.pf-m-primary {
-  @apply shadow-sm text-white bg-indigo-600 hover:bg-indigo-700
+  @apply shadow-sm text-white bg-ciam_medium hover:bg-ciam_dark
 }
 
 .pf-c-button.btn-default {
-  @apply shadow-none bg-none bg-white text-indigo-600 hover:text-indigo-500;
+  @apply shadow-none bg-none bg-white text-ciam_medium hover:text-ciam_medium;
 }
