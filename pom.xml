@@ -5,7 +5,7 @@
 
     <groupId>com.cloudiam</groupId>
     <artifactId>cloud-iam-redesign</artifactId>
-    <version>2.0.5-SNAPSHOT</version>
+    <version>2.0.6-SNAPSHOT</version>
     <name>CLOUD-IAM::THEME::REDESIGN</name>
     <description/>
     <packaging>jar</packaging>
