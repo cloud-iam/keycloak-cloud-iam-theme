@@ -5,9 +5,12 @@
 
     <groupId>com.cloudiam</groupId>
     <artifactId>cloud-iam-redesign</artifactId>
-    <version>2.0.4-SNAPSHOT</version>
+    <version>2.0.5-SNAPSHOT</version>
     <name>CLOUD-IAM::THEME::REDESIGN</name>
     <description/>
     <packaging>jar</packaging>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 </project>

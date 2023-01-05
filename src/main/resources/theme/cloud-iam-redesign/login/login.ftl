@@ -82,7 +82,15 @@
                 </ul>
             </div>
         </#if>
-
+        <div id="kc-sso-providers" class="${properties.kcFormSocialAccountSectionClass!}">
+                <hr/>
+                <br/>
+                <div id="kc-registration-container">
+                    <div id="kc-registration">
+                        <span><a tabindex="6" href="${url.loginUrl}&sso=true">${msg("signInSSO")}</a></span>
+                    </div>
+                </div>
+        </div>
     </div>
     <#elseif section = "info" >
         <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
