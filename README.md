@@ -8,10 +8,16 @@ mvn package
 
 ## Theme Development Workflow
 
-Build this theme `.jar` file with:
+Build this theme `.jar` file with (or use the `build.sh` file):
 
 ```bash
-# build the theme and wrap it in a .jar file
+# install dependencies
+npm install
+
+# compile theme scss files
+npm run build
+
+# package theme and wrap it in a .jar file
 mvn package
 
 # move theme to /tmp/theme/ folder for futur use by keycloak
