@@ -15,16 +15,6 @@
     <title>${msg("loginTitle",(realm.displayName!''))}</title>
     <link rel="icon" href="${url.resourcesPath}/img/favicon.ico" />
 
-    <!-- Matomo Tag Manager -->
-    <script>
-        var _mtm = window._mtm = window._mtm || [];
-        _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.async=true;
-        g.src='https://cdn.matomo.cloud/cloudiam.matomo.cloud/container_wITfbJGn.js'; s.parentNode.insertBefore(g,s);
-    </script>
-    <!-- End Matomo Tag Manager -->
-
     <#if properties.stylesCommon?has_content>
         <#list properties.stylesCommon?split(' ') as style>
             <link href="${url.resourcesCommonPath}/${style}" rel="stylesheet" />
