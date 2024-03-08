@@ -1,0 +1,49 @@
+version: "3.9"
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:23.0.6
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: password
+      KC_DB: postgres
+      KC_DB_USERNAME: admin
+      KC_DB_PASSWORD: password
+      KC_DB_URL_HOST: keycloak-db
+      KC_DB_URL_PORT: 5432
+      KC_DB_URL_DATABASE: keycloak
+      KC_LOG_FORMAT: "%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c] (%t) %s%e%n"
+      KC_LOG_LEVEL: "INFO"
+    command:
+      - "start-dev"
+      - "--spi-theme-static-max-age=-1"
+      - "--spi-theme-cache-themes=false"
+      - "--spi-theme-cache-templates=false"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./src/main/resources/theme:/opt/keycloak/themes/:z
+    depends_on:
+      - keycloak-db
+    networks:
+      - keycloak-internal
+  keycloak-db:
+    image: postgres:14
+    networks:
+      - keycloak-internal
+    ports:
+      - "5433:5432"
+    volumes:
+      - x_postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+
+volumes:
+  x_postgres_data:
+    driver: local
+
+networks:
+  keycloak-internal:
+    name: keycloak-internal

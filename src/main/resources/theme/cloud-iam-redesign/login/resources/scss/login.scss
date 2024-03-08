@@ -169,3 +169,7 @@ form {
 .pf-c-button.btn-default {
   @apply shadow-none bg-none bg-white text-ciam_medium hover:text-ciam_medium;
 }
+
+.password-toggle-button {
+  width: max-content;
+}
