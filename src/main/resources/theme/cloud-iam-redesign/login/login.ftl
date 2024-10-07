@@ -1,5 +1,5 @@
-<#import "layout-cloud-iam.ftl" as layoutCloudIAM>
-<@layoutCloudIAM.registrationCloudIamLayout displayMessage=!messagesPerField.existsError('username','password') displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled??; section>
+<#import "template.ftl" as layout>
+<@layout.registrationLayout displayMessage=!messagesPerField.existsError('username','password') displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled??; section>
     <#if section = "header">
         ${msg("loginAccountTitle")}
     <#elseif section = "form">
@@ -82,15 +82,6 @@
                 </ul>
             </div>
         </#if>
-        <div id="kc-sso-providers" class="${properties.kcFormSocialAccountSectionClass!}">
-                <hr/>
-                <br/>
-                <div id="kc-registration-container">
-                    <div id="kc-registration">
-                        <span><a tabindex="6" href="${url.loginUrl}&sso=true">${msg("signInSSO")}</a></span>
-                    </div>
-                </div>
-        </div>
     </div>
     <#elseif section = "info" >
         <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
@@ -102,4 +93,4 @@
         </#if>
     </#if>
 
-</@layoutCloudIAM.registrationCloudIamLayout>
+</@layout.registrationLayout>

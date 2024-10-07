@@ -1,5 +1,5 @@
-<#import "layout-cloud-iam.ftl" as layoutCloudIAM>
-<@layoutCloudIAM.registrationCloudIamLayout displayMessage=!messagesPerField.existsError('firstName','lastName','email','username','password','password-confirm'); section>
+<#import "template.ftl" as layout>
+<@layout.registrationLayout displayMessage=!messagesPerField.existsError('firstName','lastName','email','username','password','password-confirm'); section>
     <#if section = "header">
         ${msg("registerTitle")}
     <#elseif section = "form">
@@ -137,4 +137,4 @@
             </div>
         </form>
     </#if>
-</@layoutCloudIAM.registrationCloudIamLayout>
+</@layout.registrationLayout>

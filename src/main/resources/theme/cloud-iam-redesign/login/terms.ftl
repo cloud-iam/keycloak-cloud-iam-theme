@@ -1,5 +1,5 @@
-<#import "layout-cloud-iam.ftl" as layoutCloudIAM>
-<@layoutCloudIAM.registrationCloudIamLayout displayMessage=false; section>
+<#import "template.ftl" as layout>
+<@layout.registrationLayout displayMessage=false; section>
     <#if section = "header">
         ${msg("termsTitle")}
     <#elseif section = "form">
@@ -14,4 +14,4 @@
     </form>
     <div class="clearfix"></div>
     </#if>
-</@layoutCloudIAM.registrationCloudIamLayout>
+</@layout.registrationLayout>
