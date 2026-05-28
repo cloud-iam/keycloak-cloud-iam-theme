@@ -4,13 +4,32 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Run a build.sh
-        run: bash build.sh
-        shell: bash
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: 'maven'
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Build theme CSS
+        run: npm run build
+
+      - name: Package theme JAR
+        run: mvn -B package
+
       - name: Archive artifacts (jar)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: artifacts-jar
           path: target/*.jar
- 

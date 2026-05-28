@@ -1,8 +1,8 @@
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 module.exports = {
-    purge: [
-        "./src/**/*.scss"
+    content: [
+        './src/main/resources/theme/cloud-iam-redesign/**/*.{scss,ftl,html,properties}',
     ],
     theme: {
         colors: {
@@ -16,11 +16,10 @@ module.exports = {
             yellow: colors.yellow,
             ciam_dark: '#00318A',
             ciam_medium: '#3063BC',
-            ciam_light: '#86E2FA'
+            ciam_light: '#86E2FA',
         },
     },
-    variants: {},
     plugins: [
         require('@tailwindcss/forms'),
-    ]
+    ],
 };
