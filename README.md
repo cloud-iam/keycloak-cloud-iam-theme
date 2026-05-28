@@ -1,5 +1,22 @@
 # Cloud-IAM Example Keycloak theme
 
+Customisation example of the login page
+
+![Apperance demo](./appearance.png)
+
+- Targets **Keycloak 26.6.x**. 
+- Requires Node.js 20+ and JDK 21.
+
+## ⚠️ Demo only
+
+This repository is a **demonstration** of how to put a custom Keycloak theme together: packaging structure, build pipeline, FTL/SCSS layout, and the Maven wrapper around it.
+It's published as a starting point for teams who want to ship their own theme.
+
+Please don't deploy this theme as-is in production.
+It isn't actively maintained, the styling is illustrative rather than polished, and the asset pipeline is tuned for clarity over robustness.
+Fork it, adapt it to your brand, give it a once-over, and make it yours. 
+See the *"How to use this theme as a starter"* section below.
+
 ## Install dependencies
 
 ```
@@ -24,10 +41,10 @@ Build this theme `.jar` file with:
 
 ```bash
 # build the theme and wrap it in a .jar file
-mvn package
+npm install && npm run build && mvn package
 ```
 
-Then start Keycloak IAM (in single-node mode) locally through docker and use the host `./src/main/resources/theme` folder as Keycloak deployment directory.
+Then start Keycloak IAM (in single-node mode) locally through docker. The host `./src/main/resources/theme` folder is mounted into the Keycloak container as its themes directory, and the theme/template caches are disabled — so changes to `.ftl` files and `theme.properties` are picked up on the next page load. Only SCSS changes need a rebuild (`npm run build`) to regenerate `dist/login.css`. Use `./watch.sh` (requires `npm i -g nodemon`) to auto-rebuild SCSS on save.
 
 ```bash
 docker compose up -d
@@ -51,10 +68,9 @@ change the type to put the themes you want :
 }
 ```
 
-
 ## How to use this theme as a starter
 
-If you want to start developping your new theme based on our existing template, help yourself!
+If you want to start developing your new theme based on our existing template, help yourself!
 
 Assuming your company is named `acme`, you'll have to setup a few things before building your own theme.
 

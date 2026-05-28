@@ -1,6 +1,6 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 body, .login-pf body, .login-pf {
@@ -34,7 +34,7 @@ div.kc-logo-text span {
 }
 
 .card-pf {
-  @apply mt-4 sm:mx-auto sm:w-full sm:max-w-md bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10;
+  @apply mt-4 sm:mx-auto sm:w-full sm:max-w-md bg-white py-8 px-4 shadow sm:px-10;
 }
 
 form {
@@ -46,7 +46,7 @@ form {
 }
 
 .form-group input {
-  @apply appearance-none block w-full border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-ciam_medium focus:border-ciam_medium sm:text-sm;
+  @apply appearance-none block w-full border border-gray-300 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-ciam_medium focus:border-ciam_medium sm:text-sm;
 }
 
 .login-pf-header h1 {
@@ -170,6 +170,18 @@ form {
   @apply shadow-none bg-none bg-white text-ciam_medium hover:text-ciam_medium;
 }
 
-.password-toggle-button {
-  width: max-content;
+// Password visibility toggle (added in Keycloak 25+): the base template wraps the
+// password input and the show/hide button in `.pf-c-input-group`. The generic
+// `.pf-c-button { width: 100% }` rule above would otherwise stretch the toggle to
+// fill the row, squashing the input. Lay them out side-by-side and shrink the toggle.
+.pf-c-input-group {
+  @apply flex items-stretch w-full;
+}
+
+.pf-c-input-group input {
+  @apply flex-1 min-w-0;
+}
+
+.pf-c-input-group .pf-c-button.pf-m-control {
+  @apply w-auto flex-none px-3 bg-white text-gray-500 border border-gray-300 border-l-0 shadow-none rounded-l-none hover:text-gray-700 hover:bg-gray-50;
 }

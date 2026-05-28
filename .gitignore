@@ -1,6 +1,7 @@
 .idea
 target
 .parcel-cache
+.tmp
 *.iml
 *.log
 node_modules
